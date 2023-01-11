@@ -6,44 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MacCafe</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="script/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand"  ><img src="/images/logo.png" style="width:5rem;"></a>
+              <a class="navbar-brand" href="#" ><img src="/images/logo.png" style="width:5rem;"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" >Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" >About Us</a>
+                    <a class="nav-link" href="#">About Us</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Shop
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" >Action</a></li>
-                      <li><a class="dropdown-item" >Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" >Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" >Contact Us</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-light bg-light" type="submit"><img src="/images/cart.png"></button>
+                  <button class="btn btn-outline-light bg-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" ><img src="/images/cart.png"></button>
                 </form>
               </div>
             </div>
@@ -67,129 +66,128 @@
       </div>
     </section>
     <main>
-      <div class="d-flex row mt-5 mx-2 text-center justify-content-evenly">
-<!--=============================== 1st item===================================-->
-            <div class="col col-2 mx-2">
-                <div class="card" id="item" style="width: 18rem;">
-                    <h5 class="card-title" id="item-name">Card title</h5>
-                    <img src="images/Item1.png" class="card-img-top" alt="...">
+      <div class="d-flex flex-wrap mt-5 mx-2 text-center justify-content-evenly ">
+            <!--=============================== 1st item===================================-->
+            <div class="dflex mx-2">
+                <div class="card" id ="firstItem" style="width: 18rem;">
+                    <h5 class="card-title">Nike1</h5>
+                    <img src="images/Item1.png" class="card-img-top1" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       <h4 class="card-title">Price: $<span id="Item1Price">110</span></h4>
-                      <a type="submit" onclick="" class="btn btn-primary" data-action="addtoCart" id="Item1">Add to Cart</a>
+                      <a class="btn btn-primary" onclick="addToCart()" id="Item1" type="button" >Add to Cart</a>
                     </div>
                   </div>
             </div>
             <!--=============================== 2nd item===================================-->
-            <div class="col col-2 mx-2">
-                <div class="card" id="item2" style="width: 18rem;">
-                    <h5 class="card-title" id="item-name">Card title</h5>
+            <div class="dflex mx-2">
+                <div class="card" style="width: 18rem;">
+                    <h5 class="card-title">Card title</h5>
                     <img src="images/Item2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <h4 class="card-title">Price: $<span id="Item2Price">120</span></h4>
-                      <a type="submit" onclick="" class="btn btn-primary" data-action="addtoCart" id="Item2">Add to Cart</a>
+                      <h5 class="card-title">Price: $<span id="Item2Price">120</span></h5>
+                      <a href="#" class="btn btn-primary" id="Item2">Add to Cart</a>
                     </div>
                   </div>
             </div>
             <!--=============================== 3rd item===================================-->
-            <div class="col col-2 mx-2">
+            <div class="dflex mx-2">
                 <div class="card" style="width: 18rem;">
-                    <h5 class="card-title" id="item-name">Card title</h5>
+                    <h5 class="card-title">Card title</h5>
                     <img src="images/Item3.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <h4 class="card-title">Price: $<span id="Item3Price">130</span></h4>
-                      <a type="submit" onclick="" class="btn btn-primary" data-action="addtoCart" id="Item3">Add to Cart</a>
+                      <h5 class="card-title">Price: $<span id="Item3Price">130</span></h5>
+                      <a href="#" class="btn btn-primary" id="Item3">Add to Cart</a>
                     </div>
                   </div>
             </div>
             <!--=============================== 4th item===================================-->
-            <div class="col col-2 mx-2">
-                <div class="card" id="item" style="width: 18rem;">
-                    <h5 class="card-title" id="item-name">Card title</h5>
+            <div class="dflex mx-2">
+                <div class="card" style="width: 18rem;">
+                    <h5 class="card-title">Card title</h5>
                     <img src="images/Item4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <h4 class="card-title">Price: $<span id="Item4Price">140</span></h4>
-                      <a type="submit" onclick="" class="btn btn-primary" id="Item4">Add to Cart</a>
+                      <h5 class="card-title">Price: $<span id="Item4Price">140</span></h5>
+                      <a href="#" class="btn btn-primary" id="Item4">Add to Cart</a>
                     </div>
                   </div>
             </div>
             <!--=============================== 5th item===================================-->
-            <div class="col col-2 mx-2">
-                <div class="card" id="item" style="width: 18rem;">
-                    <h5 class="card-title" id="item-name">Card title</h5>
+            <div class="dflex mx-2">
+                <div class="card" style="width: 18rem;">
+                    <h5 class="card-title">Card title</h5>
                     <img src="images/Item5.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <h4 class="card-title">Price: $<span id="Item5Price">150</span></h4>
-                      <a type="submit" onclick="" class="btn btn-primary" id="Item5">Add to Cart</a>
+                      <h5 class="card-title">Price: $<span id="Item5Price">150</span></h5>
+                      <a href="#" class="btn btn-primary" id="Item5">Add to Cart</a>
                     </div>
                   </div>
             </div>
-        </div>
+            </div>
+            <!--===================================================== 2nd collum items =================================================================-->
 
-        <!--===================================================== 2nd collum items =================================================================-->
-
-        <div class="d-flex row mt-5 mx-2 text-center justify-content-evenly">
+            <div class="d-flex flex-wrap mt-5 mx-2 text-center justify-content-evenly">
             <!--=============================== 6th item===================================-->
-                        <div class="col col-2 mx-2">
+                        <div class="dflex mx-2">
                             <div class="card" style="width: 18rem;">
-                                <h5 class="card-title" id="item-name">Card title</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <img src="images/Item1.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <h4 class="card-title">Price: $<span id="Item6Price">160</span></h4>
-                                  <a type="submit" onclick="" class="btn btn-primary" id="Item1">Add to Cart</a>
+                                  <h5 class="card-title">Price: $<span id="Item6Price">160</span></h5>
+                                  <a href="#" class="btn btn-primary" id="Item1">Add to Cart</a>
                                 </div>
                               </div>
                         </div>
                         <!--=============================== 7th item===================================-->
-                        <div class="col col-2 mx-2">
+                        <div class="dflex mx-2">
                             <div class="card" style="width: 18rem;">
-                                <h5 class="card-title" id="item-name">Card title</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <img src="images/Item2.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <h4 class="card-title">Price: $<span id="Item7Price">170</span></h4>
-                                  <a  type="submit" onclick="" class="btn btn-primary" id="Item2">Add to Cart</a>
+                                  <h5 class="card-title">Price: $<span id="Item7Price">170</span></h5>
+                                  <a href="#" class="btn btn-primary" id="Item2">Add to Cart</a>
                                 </div>
                               </div>
                         </div>
                         <!--=============================== 8th item===================================-->
-                        <div class="col col-2 mx-2">
+                        <div class="dflex mx-2">
                             <div class="card" style="width: 18rem;">
-                                <h5 class="card-title" id="item-name">Card title</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <img src="images/Item3.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <h4 class="card-title">Price: $<span id="Item8Price">180</span></h4>
-                                  <a  type="submit" onclick="" class="btn btn-primary" id="Item3">Add to Cart</a>
+                                  <h5 class="card-title">Price: $<span id="Item8Price">180</span></h5>
+                                  <a href="#" class="btn btn-primary" id="Item3">Add to Cart</a>
                                 </div>
                               </div>
                         </div>
                         <!--=============================== 9th item===================================-->
-                        <div class="col col-2 mx-2">
+                        <div class="dflex mx-2">
                             <div class="card" style="width: 18rem;">
-                                <h5 class="card-title" id="item-name">Card title</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <img src="images/Item4.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <h4 class="card-title">Price: $<span id="Item9Price">190</span></h4>
-                                  <a type="submit" onclick="" class="btn btn-primary" id="Item4">Add to Cart</a>
+                                  <h5 class="card-title">Price: $<span id="Item9Price">190</span></h5>
+                                  <a href="#" class="btn btn-primary" id="Item4">Add to Cart</a>
                                 </div>
                               </div>
                         </div>
                         <!--=============================== 10th item===================================-->
-                        <div class="col col-2 mx-2">
+                        <div class="dflex mx-2">
                             <div class="card" style="width: 18rem;">
-                                <h5 class="card-title" id="item-name">Card title</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <img src="images/Item5.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <h4 class="card-title">Price: $<span id="Item10Price">200</span></h4>
-                                  <a type="submit" onclick="" class="btn btn-primary" id="Item5">Add to Cart</a>
+                                  <h5 class="card-title">Price: $<span id="Item10Price">200</span></h5>
+                                  <a href="#" class="btn btn-primary" id="Item5">Add to Cart</a>
                                 </div>
                               </div>
                         </div>
@@ -198,6 +196,40 @@
     <footer class="d-flex bg-dark justify-content-center text-white mt-2">
         <p> @copyright 2023 Group 1 WD 37</p>
     </footer>
-    <script src="js/main.js"></script>
+
+       <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="shopping-cart" class="shopping-cart-container">
+        <table id='cart-content'>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="js/push.js"></script>
 </body>
 </html>
