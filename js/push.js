@@ -2,15 +2,25 @@ let cart = [];
 let items = [];
 const cartContent = document.querySelector("#cart-content");
 
-function addToCart(){
-    items = document.getElementById('firstItem').querySelectorAll('h5,img,span');
+function addToCart(e){ 
+  id = e.id;
+    items = document.getElementById(id+'card').querySelectorAll('h5,img,span');
     itemsName = items[0].innerText;
     itemImage = items[1].getAttribute("src");
-    itemsPrice = items[2].innerText;
+    itemsPrice = items[2].innerText; 
+    productMarkup = ''
+    cart.push( id);
+    total = 0;
 
-    cart.push(items);
 
-    let productMarkup = 
+    for (let id of cart){
+      items = document.getElementById(id+'card').querySelectorAll('h5,img,span');
+      itemsName = document.getElementById(id+'title').innerHTML;
+      itemImage = items[1].getAttribute("src");
+      itemsPrice = items[2].innerText; 
+      total+=parseFloat(itemsPrice);
+
+      productMarkup +=
         `
           <tr>
           <td>
@@ -23,10 +33,20 @@ function addToCart(){
           </tr>
         `;
 
+
     cartContent.querySelector("tbody").innerHTML = productMarkup;
-    alert('item added to cart');
 
-    console.log(itemImage);
+}
+productMarkup+= `
+<tr>
+<td colspan="2">
+  Total
+</td>
 
+<td>${parseFloat(total,2)}</td>
+</tr>
+`;
+cartContent.querySelector("tbody").innerHTML = productMarkup;
+alert('item added to cart');
 }
 
